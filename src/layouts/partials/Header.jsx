@@ -3,11 +3,18 @@ import { Link, NavLink } from "react-router-dom";
 export default function Header() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav
+        className="navbar navbar-expand-lg bg-body-tertiary"
+        data-bs-theme="dark"
+      >
         <div className="container-fluid">
-          <NavLink className="navbar-brand" to="/">
-            Logo
-          </NavLink>
+          <Link className="navbar-brand" to="/">
+            <img
+              className="img-fluid logo-img"
+              src="src/assets/img/logo.png"
+              alt=""
+            />
+          </Link>
           <button
             className="navbar-toggler"
             type="button"

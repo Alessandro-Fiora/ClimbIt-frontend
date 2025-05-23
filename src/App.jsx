@@ -4,6 +4,7 @@ import DefaultLayout from "./layouts/DefaultLayout";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import BookIndexPage from "./pages/books/BookIndexPage";
+import BookShowPage from "./pages/books/BookShowPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           {/* Books pages */}
           <Route path="books">
             <Route index element={<BookIndexPage />}></Route>
+            <Route path=":id" element={<BookShowPage />}></Route>
           </Route>
         </Route>
       </Routes>
