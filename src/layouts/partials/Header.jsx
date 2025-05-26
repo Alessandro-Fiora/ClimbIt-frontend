@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <>
       <nav
-        className="navbar navbar-expand-lg bg-body-tertiary"
+        className="navbar sticky-top navbar-expand-lg bg-body-tertiary"
         data-bs-theme="dark"
       >
         <div className="container-fluid">
@@ -30,8 +30,26 @@ export default function Header() {
             <ul className="navbar-nav">
               <li className="nav-item">
                 <NavLink className="nav-link" aria-current="page" to="books">
-                  Books
+                  Pubblicazioni
                 </NavLink>
+              </li>
+              <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Categorie
+                </a>
+                <ul className="dropdown-menu p-2">
+                  <li>
+                    <NavLink className="dropdown-item" href="#">
+                      Categoria stampata dinamicamente da fetch
+                    </NavLink>
+                  </li>
+                </ul>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" aria-current="page" to="about">

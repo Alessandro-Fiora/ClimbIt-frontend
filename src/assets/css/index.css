@@ -1,4 +1,143 @@
+/* * RESET */
+li,
+Link,
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+
+/* ^ NAVBAR */
+
 /* * LOGO */
 img.logo-img {
-  height: 75px;
+  height: 50px;
 }
+
+/* * DROPDOWN */
+
+.dropdown-item.active {
+  background-color: transparent;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  color: var(--bs-dropdown-link-hover-color);
+  background-color: var(--bs-dropdown-link-hover-bg);
+}
+
+/* ^ HOMEPAGE */
+
+/* * CAROUSEL */
+
+.carousel-item {
+  position: relative;
+  height: 700px;
+  overflow: hidden;
+}
+
+.carousel-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.carousel-caption {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  padding: 0 1rem;
+  pointer-events: none;
+}
+
+.carousel-caption-bottom {
+  bottom: 0;
+}
+
+.carousel-caption-top {
+  top: 250px;
+}
+
+.carousel-img-top {
+  object-position: top;
+}
+
+/* *PREVIEW */
+
+#preview {
+  background-color: #e6e6e64b;
+}
+
+/* ^ BOOK CARD */
+
+.book-card {
+  position: relative;
+}
+
+.pill-scopri {
+  display: none;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #d32f2f;
+  color: #fff;
+  padding: 0.3em 1em;
+  border-radius: 999px;
+  font-weight: bold;
+  font-size: 0.95em;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.book-card:hover .pill-scopri {
+  display: inline-block;
+}
+
+.card-red-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.25rem;
+  background: #d32f2f;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.book-card:hover .card-red-bar {
+  opacity: 1;
+}
+
+/* ^ PILL BADGES */
+
+/** da cambiare colore solo nella pagina di dettaglio */
+
+/* .category-badge:hover {
+  background-color: rgb(2, 95, 177) !important;
+}
+
+.region-badge:hover {
+  background-color: rgb(0, 110, 0) !important;
+} */
