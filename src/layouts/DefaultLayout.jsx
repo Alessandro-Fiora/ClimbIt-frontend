@@ -1,4 +1,5 @@
 import Header from "./partials/Header";
+import Footer from "./partials/Footer";
 import { Outlet } from "react-router-dom";
 
 export default function DefaultLayout() {
@@ -8,6 +9,7 @@ export default function DefaultLayout() {
       <main>
         <Outlet />
       </main>
+      <Footer></Footer>
     </>
   );
 }

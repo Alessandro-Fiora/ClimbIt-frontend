@@ -5,6 +5,7 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import BookIndexPage from "./pages/books/BookIndexPage";
 import BookShowPage from "./pages/books/BookShowPage";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
             <Route index element={<BookIndexPage />}></Route>
             <Route path=":id" element={<BookShowPage />}></Route>
           </Route>
+
+          <Route path="*" Component={NotFound}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

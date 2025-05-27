@@ -20,6 +20,28 @@ export default function HomePage() {
           className="carousel slide"
           data-bs-ride="carousel"
         >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleAutoplaying"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
           <div className="carousel-inner">
             <Link to="/books">
               <div className="carousel-item active">
@@ -111,7 +133,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section id="preview" className="mt-5">
+      <section className="preview pt-3 pb-5">
         <BookResults books={books} limit={8} />
       </section>
     </>

@@ -14,6 +14,7 @@ export default function Header() {
               src="src/assets/img/logo.png"
               alt=""
             />
+            <span className="text-light">Versante Nord Editore</span>
           </Link>
           <button
             className="navbar-toggler"
@@ -27,15 +28,19 @@ export default function Header() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
+            <ul className="navbar-nav ms-3">
               <li className="nav-item">
-                <NavLink className="nav-link" aria-current="page" to="books">
+                <NavLink
+                  className="nav-link text-light"
+                  aria-current="page"
+                  to="books"
+                >
                   Pubblicazioni
                 </NavLink>
               </li>
               <li className="nav-item dropdown">
                 <a
-                  className="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle text-light"
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -52,8 +57,12 @@ export default function Header() {
                 </ul>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" aria-current="page" to="about">
-                  About
+                <NavLink
+                  className="nav-link text-light"
+                  aria-current="page"
+                  to="about"
+                >
+                  Chi siamo
                 </NavLink>
               </li>
             </ul>
