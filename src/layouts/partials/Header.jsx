@@ -1,6 +1,17 @@
 import { Link, NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
+
+import Searchbar from "../../components/Searchbar";
 
 export default function Header() {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    fetch(import.meta.env.VITE_BACKEND_URL_CATEGORIES)
+      .then((res) => res.json())
+      .then((data) => setCategories(data));
+  }, []);
+
   return (
     <>
       <nav
@@ -49,11 +60,16 @@ export default function Header() {
                   Categorie
                 </a>
                 <ul className="dropdown-menu p-2">
-                  <li>
-                    <NavLink className="dropdown-item" href="#">
-                      Categoria stampata dinamicamente da fetch
-                    </NavLink>
-                  </li>
+                  {categories.map((cat) => (
+                    <li key={cat.id}>
+                      <NavLink
+                        className="dropdown-item"
+                        to={"categories/" + cat.id}
+                      >
+                        {cat.nome}
+                      </NavLink>
+                    </li>
+                  ))}
                 </ul>
               </li>
               <li className="nav-item">
@@ -66,6 +82,9 @@ export default function Header() {
                 </NavLink>
               </li>
             </ul>
+            <div className="ms-auto">
+              <Searchbar />
+            </div>
           </div>
         </div>
       </nav>

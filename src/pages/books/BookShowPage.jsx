@@ -47,21 +47,18 @@ export default function BookShowPage() {
                     <div className="col-12 mb-3">
                       {book.categories &&
                         book.categories.map((cat) => (
-                          <Link to="/books" key={cat.id}>
-                            <Pill
-                              isCategory={true}
-                              text={cat.nome}
-                              key={cat.id}
-                            />
-                          </Link>
+                          <Pill
+                            isCategory={true}
+                            text={cat.nome}
+                            key={cat.id}
+                          />
                         ))}
-                      <Link to="/books">
-                        <Pill
-                          isCategory={false}
-                          text={book.region.nome}
-                          key={book.region.id}
-                        />
-                      </Link>
+
+                      <Pill
+                        isCategory={false}
+                        text={book.region.nome}
+                        key={book.region.id}
+                      />
                     </div>
                     <div className="col-12">
                       <div

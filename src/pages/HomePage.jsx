@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import BookResults from "../components/BookResults";
+import Pill from "../components/Pill";
 
 export default function HomePage() {
   const [books, setBooks] = useState([]);
@@ -20,12 +21,12 @@ export default function HomePage() {
           className="carousel slide"
           data-bs-ride="carousel"
         >
-          <div class="carousel-indicators">
+          <div className="carousel-indicators">
             <button
               type="button"
               data-bs-target="#carouselExampleAutoplaying"
               data-bs-slide-to="0"
-              class="active"
+              className="active"
               aria-current="true"
               aria-label="Slide 1"
             ></button>
@@ -71,7 +72,7 @@ export default function HomePage() {
                 </div>
               </div>
             </Link>
-            <Link to="/books">
+            <Link to="/categories/1">
               <div className="carousel-item">
                 <img
                   src="/img/carousel/carousel_3.jpg"
@@ -125,10 +126,17 @@ export default function HomePage() {
               <h6 className="ps-5">Versante Nord editore</h6>
             </div>
             <div className="col-6">
-              <p className="fw-bold text-center p-5">
+              <p className="fw-bold text-center p-5 pb-1">
                 Alcuni prodotti nelle categorie:
               </p>
-              {/* INSERIRE PILLS CATEGORIE */}
+              <div className="pills text-center">
+                <Link to={"/categories/1"}>
+                  <Pill isCategory={false} text="Falesia"></Pill>
+                </Link>
+                <Link to={"/categories/2"}>
+                  <Pill isCategory={false} text="Multipitch"></Pill>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

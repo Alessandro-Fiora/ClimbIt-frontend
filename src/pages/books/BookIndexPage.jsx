@@ -16,7 +16,7 @@ export default function BookIndexPage() {
     <>
       <div className="container">
         <div className="intestazione pt-4 pb-4">
-          <h1 className="mb-3">Pubblicazioni</h1>
+          <h1 className="mb-3 fw-bold">Pubblicazioni</h1>
           {books && books.length > 0 && (
             <h2 className="h6">Totale risultati: {books.length}</h2>
           )}
