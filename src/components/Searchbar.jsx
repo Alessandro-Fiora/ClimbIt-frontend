@@ -23,7 +23,7 @@ export default function Searchbar() {
     <>
       <form
         id="searchbar"
-        className="text-bg-secondary rounded-5 border border-light ps-3 pe-3 pt-1 pb-1 d-flex"
+        className="rounded-pill border border-light px-3 py-1 d-flex align-items-center"
         onSubmit={(e) => {
           e.preventDefault();
           searchButtonHandler();
@@ -31,16 +31,20 @@ export default function Searchbar() {
       >
         <input
           type="text"
-          className="form-control"
+          className="form-control bg-transparent border-0 text-light"
           id="search"
-          placeholder="Cerca"
+          placeholder="Cosa cerchi?"
           value={searchWord}
           onChange={onChangeSearch}
+          autoComplete="off"
         />
-        <button id="search-btn" className="btn pe-0">
-          <div className="search-icon d-flex justify-content-center align-items-center">
-            <i className="fa-solid fa-magnifying-glass"></i>
-          </div>
+        <button
+          id="search-btn"
+          className="btn p-0"
+          type="submit"
+          aria-label="Cerca"
+        >
+          <i className="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
     </>

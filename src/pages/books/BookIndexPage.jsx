@@ -6,14 +6,17 @@ import BookResults from "../../components/BookResults";
 
 export default function BookIndexPage() {
   const [books, setBooks] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const location = useLocation();
   const filter = location.state?.filter?.toLowerCase() || "";
 
   useEffect(() => {
+    setIsLoading(true);
     fetch(import.meta.env.VITE_BACKEND_URL)
       .then((res) => res.json())
-      .then((data) => setBooks(data));
-  }, [filter]);
+      .then((data) => setBooks(data))
+      .finally(() => setIsLoading(false));
+  }, []);
 
   const filteredBooks = filter
     ? books.filter((book) => {
@@ -40,18 +43,19 @@ export default function BookIndexPage() {
   return (
     <>
       <div className="container">
-        <div className="intestazione pt-4">
-          {filteredBooks && filteredBooks.length > 0 && (
-            <>
+        {isLoading ? (
+          <div className="d-flex justify-content-center min-vh-100">
+            <h1 className="loading p-5">Caricamento...</h1>
+          </div>
+        ) : filteredBooks.length > 0 ? (
+          <>
+            <div className="intestazione pt-4">
               <h1 className="mb-3 fw-bold">Pubblicazioni</h1>
-              <h2 className="h6">Totale risultati: {books.length}</h2>
+              <h2 className="h6">Totale risultati: {filteredBooks.length}</h2>
               <hr />
-            </>
-          )}
-        </div>
-
-        {filteredBooks && filteredBooks.length > 0 ? (
-          <BookResults books={filteredBooks} />
+            </div>
+            <BookResults books={filteredBooks} />
+          </>
         ) : (
           <div className="container text-center p-5 min-vh-100">
             <h1>Nessun risultato trovato</h1>

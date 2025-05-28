@@ -33,11 +33,13 @@ export default function CategoryShowPage() {
             {category.books && category.books.length > 0 ? (
               <BookResults books={category.books} />
             ) : (
-              <h2>Nessun libro trovato</h2>
+              <div className="container text-center p-5 min-vh-100">
+                <h1>Nessun risultato trovato</h1>
+              </div>
             )}
           </>
         ) : (
-          <div className="d-flex justify-content-center align-items-center">
+          <div className="d-flex justify-content-center min-vh-100">
             <h1 className="loading p-5">Caricamento...</h1>
           </div>
         )}
