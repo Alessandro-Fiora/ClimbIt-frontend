@@ -38,6 +38,31 @@ img.logo-img {
   background-color: var(--bs-dropdown-link-hover-bg);
 }
 
+/* * SEARCHBAR */
+
+#searchbar input {
+  color: inherit !important;
+  background-color: inherit !important;
+  border: none !important;
+}
+
+#searchbar .form-control {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#searchbar #search-btn {
+  border: none !important;
+}
+
+#searchbar #search-btn:active {
+  border: none !important;
+}
+
+#searchbar #search-btn:click {
+  border: none !important;
+}
+
 /* ^ HOMEPAGE */
 
 /* * CAROUSEL */
@@ -168,4 +193,10 @@ img.logo-img {
 .accordion-button:not(.collapsed) {
   color: inherit !important;
   background-color: transparent !important;
+}
+
+/* ^ ABOUT US PAGE */
+#about-jumbo-img {
+  width: 100%;
+  object-fit: cover;
 }

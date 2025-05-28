@@ -131,10 +131,10 @@ export default function HomePage() {
               </p>
               <div className="pills text-center">
                 <Link to={"/categories/1"}>
-                  <Pill isCategory={false} text="Falesia"></Pill>
+                  <Pill isCategory={true} text="Falesia"></Pill>
                 </Link>
                 <Link to={"/categories/2"}>
-                  <Pill isCategory={false} text="Multipitch"></Pill>
+                  <Pill isCategory={true} text="Multipitch"></Pill>
                 </Link>
               </div>
             </div>

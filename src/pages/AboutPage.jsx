@@ -3,7 +3,12 @@ export default function AboutPage() {
     <>
       <section className="jumbo">
         <div className="img-wrapper">
-          <img className="img-fluid" src="/img/about-us-jumbo.jpg" alt="" />
+          <img
+            id="about-jumbo-img"
+            className="img-fluid"
+            src="/img/about-us-jumbo.jpg"
+            alt=""
+          />
         </div>
       </section>
       <div className="container pt-5">
@@ -20,8 +25,13 @@ export default function AboutPage() {
         </section>
         <section className="p-5">
           <h2 className="h1 fw-bold mb-4">Guide outdoor</h2>
-          <div className="img-wrapper">
-            <img className="img-fluid" src="/img/about_us_img.jpg" alt="" />
+          <div className="jumbo-img-wrapper">
+            <img
+              id="about-jumbo-img"
+              className="img-fluid"
+              src="/img/about_us_img.jpg"
+              alt=""
+            />
           </div>
           <div className="d-flex justify-content-center align-items-center p-5">
             <p className="h5 w-50 pt-5 mb-5">
