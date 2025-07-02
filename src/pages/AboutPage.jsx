@@ -16,8 +16,8 @@ export default function AboutPage() {
           <h1 className="fw-bold">Chi siamo</h1>
           <div className="d-flex justify-content-center align-items-center p-5">
             <p className="h5 w-50">
-              VERSANTE SUD è una delle principali <strong>case Editrici</strong>{" "}
-              europee che si occupano di{" "}
+              VERSANTE NORD è una delle principali{" "}
+              <strong>case Editrici</strong> europee che si occupano di{" "}
               <strong>alpinismo e sport outdoor</strong> in genere, attiva nel
               mondo dell’editoria dal 1996.
             </p>
