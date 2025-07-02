@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="container">
         <div className="d-flex flex-column flex-md-row justify-content-between align-items-center  px-3">
           <div className="text-center text-md-start mb-3 mb-md-0">
-            © 2025 Versante Nord, Inc.
+            © 2025 ClimbIt, Inc.
             <a href="#" className=" text-decoration-none mx-2">
               Privacy
             </a>

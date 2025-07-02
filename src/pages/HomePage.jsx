@@ -123,7 +123,7 @@ export default function HomePage() {
                 Libri, guide e manuali di alpinismo, arrampicata, scialpinismo e
                 outdoor
               </h1>
-              <h6 className="ps-5">Versante Nord editore</h6>
+              <h6 className="ps-5">ClimbIt</h6>
             </div>
             <div className="col-6">
               <p className="fw-bold text-center p-5 pb-1">

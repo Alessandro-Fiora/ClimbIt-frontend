@@ -25,7 +25,7 @@ export default function Header() {
               src="src/assets/img/logo.png"
               alt=""
             />
-            <span className="text-light">Versante Nord Editore</span>
+            <span className="text-light">ClimbIt</span>
           </Link>
           <button
             className="navbar-toggler"
