@@ -10,7 +10,7 @@ import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/ClimbIt-frontend/">
       <Routes>
         <Route path="/" element={<DefaultLayout />}>
           {/* Institutional pages */}
