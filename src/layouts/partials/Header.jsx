@@ -41,13 +41,13 @@ export default function Header() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-3">
               <li className="nav-item">
-                <NavLink
+                <Link
                   className="nav-link text-light"
                   aria-current="page"
                   to="books"
                 >
                   Pubblicazioni
-                </NavLink>
+                </Link>
               </li>
               <li className="nav-item dropdown">
                 <a
@@ -62,24 +62,24 @@ export default function Header() {
                 <ul className="dropdown-menu p-2">
                   {categories.map((cat) => (
                     <li key={cat.id}>
-                      <NavLink
+                      <Link
                         className="dropdown-item"
                         to={"categories/" + cat.id}
                       >
                         {cat.nome}
-                      </NavLink>
+                      </Link>
                     </li>
                   ))}
                 </ul>
               </li>
               <li className="nav-item">
-                <NavLink
+                <Link
                   className="nav-link text-light"
                   aria-current="page"
                   to="about"
                 >
                   Chi siamo
-                </NavLink>
+                </Link>
               </li>
             </ul>
             <div className="ms-auto">

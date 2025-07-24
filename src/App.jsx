@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 import DefaultLayout from "./layouts/DefaultLayout";
 import HomePage from "./pages/HomePage";
@@ -10,7 +10,7 @@ import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <HashRouter>
+    <Router>
       <Routes>
         <Route path="/" element={<DefaultLayout />}>
           {/* Institutional pages */}
@@ -31,7 +31,7 @@ function App() {
           <Route path="*" Component={NotFound}></Route>
         </Route>
       </Routes>
-    </HashRouter>
+    </Router>
   );
 }
 
